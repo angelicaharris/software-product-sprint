@@ -2,37 +2,126 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content = "ie=edge" />
     <title>Angelica's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+   
   </head>
   <body>
-    <div id="content">
-      <h1>Angelica's Portfolio</h1>
-      <p>This is Angelica's portfolio.</p>
-      <p> My name is Angelica. I attend WashU. I love the outdoors especially hiking and biking. My favorite sport is golf. I began playing golf at the age of 4. </p>
-      <p> My dad taught me how to play golf. It is a beautiful sport and I believe every child should get an opportunity to play it. My favorite golf course is Bandon Dunes. It is one of the world's most difficult courses. The weather was so nice when I last played there. </p>
-      <p> Past Projects </p>
-      <ul>
-  <li>Tic Tac Toe Board</li>
-  <li>Mastermind Game</li>
-  <li>WebApp</li>
-</ul> 
-<h3><a href="https://www.linkedin.com/in/angelica-harris/">Visit myLinkedIn!</a> </h3>
-<h3><a href="https://github.com/settings/profile">Visit my Github!</a> </h3>
+    <div class = "container">
+        <div class = "wrapper">
+            <div class = "content-side"> 
+                <div class = "content-side-animation"></div>
+                <header>
+                    <span class ="logo" id ="logo"> Jellie </span>
+                <nav>
+                    <ul>
+                        <li><a href = "#" id ="aboutLink">About </a> </li>
+                        <li><a href ="#" id = "skillsLink"> Skills</a></li>
+                        <li><a href ="#" id = "contactLink">Contact</a></li>
+                    </ul>
+                </nav>
+                </header>
 
-<img src="Angelica-Harris-1.jpeg" alt="Golf" width="500" height="333">
-<img src="Ervin2.JPG" alt="friends" width="500" height="333">
-<img src="Ervin3.JPG" alt="More friends" width="500" height="333">
-<br>
-<p> "Being able to record memories is one major reason why I love photography. Photography has expanded my view of the world and helped to me to see the underlying oneness in everyone. I love photography because it makes me feel one with nature or one with the people who are subjects of my photography." 
-     <br>
-   One of my hidden talents is teaching. I tutor high school students on standardized tests. My students see drastic improvements in their test scores because of the strategies I teach them. They also complement my teaching because it is sometimes the best instructions they have ever received.  
-</p>
-      <p>Click here to get my favorite color:</p>
-      <button onclick="addRandomGreeting()">Color</button>
-      <div id="greeting-container"></div>
-      <br>
+            <section class ="main" id ="main">
+            <h1 class = "main-animation"> Hi, </h1>
+            <h1 class ="main-animation"> I'm Angelica Harris </h1>
+            <p class = "main-animation"> Web Designer & Web Developer</p>
+            <a href ="#" class = "main-animation"> Contact Me</a>
+            </section>
+
+            <section class ="about" id ="about">
+            <h1> About </h1>
+            <p>Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible compute
+            </p>
+            <a href = "#"> Download Resume </a>
+            </section>
+
+            <section class = "skills" id ="skills">
+                <h1> Skills</h1>
+                <p> You'll be working from the portfolio directory. Take a minute to look at the files under that directory.</p>
+                <div class = "skills-card">
+                    <div class = "html">
+                    <img src = "html.png" alt="">
+                    <h3> html</h3>
+                    <p> 2 years Experience</p>
+                    </div>
+
+                        <div class = "css">
+                    <img src = "css.jpg" alt="">
+                    <h3> css</h3>
+                    <p> 2 years Experience</p>
+                    </div>
+
+                        <div class = "javascript">
+                    <img src = "JS.jpg" alt="">
+                    <h3> javascript</h3>
+                    <p> 2 years Experience</p>
+                    </div>
+
+                      <div class = "bootstrap">
+                    <img src = "bootstrap.png" alt="">
+                    <h3> bootstrap</h3>
+                    <p> 1 years Experience</p>
+                    </div>
+                 </div>
+        </div>
+        </section>
+
+        <section class = "contact" id ="contact">
+            <h1> Contact Me</h1>
+            <form>
+                <input type ="text" placeholder="Full Name" />
+                <input type ="email" placeholder="Email" />
+                <textarea cols ="30" rows = "10" placeholder="Message"></textarea>
+                <button type = "submit"> Send Message</button>
+            </form>
+        </section>
+        </div>
+
+        <div class = "assets-side">
+            <div class = "img">
+                <img src ="Angelica-Harris-1.jpeg" alt ="" />
+            </div>
+        <div class ="links">
+            <div class ="facebook">
+                <a href = "#"> facebook</a>
+            </div>
+
+        <div class = "twitter">
+            <a href ="#"> twitter</a>
+        </div>
+
+        <div class ="instagram">
+            <a href ="#">instagram</a>
+        </div>    
+            
+        </div> 
+        </div>
+        </div>    
     </div>
+
+        <div class ="open-modal">+</div>
+        <div class = "modal">
+        <div class = "modal-content">
+            <span class ="close-modal">&times;</span>
+            <h1>Personal Contact Details</h1>
+            <div class ="mail">
+                <img src ="Angelica-Harris-1.jpeg" alt ="">
+                <p>angelicaharris@wustl.edu</p>
+            </div>
+            <div class ="address">
+                <img src ="Angelica-Harris-1.jpeg" alt="">
+                <p> New Orleans</p>
+            </div>
+            <div class = "contact-details">
+                <img src = "Angelica-Harris-1.jpeg" alt ="">
+                <p>504-488-1045</p>
+            </div>
+        </div>
+        </div>  
+        
+<script src="script.js"></script>
   </body>
 </html>
