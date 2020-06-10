@@ -1,28 +1,88 @@
-// Copyright 2019 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+//grab all links
+let logo = document.querySelector("#logo");
+let aboutLink = document.querySelector("#aboutLink");
+let skillsLink = document.querySelector("#skillsLink");
+let contactLink = document.querySelector("#contactLink");
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+//grab all sections
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+let main = document.querySelector("#main");
+let about = document.querySelector("#about");
+let skills = document.querySelector("#skills");
+let contact = document.querySelector("#contact");
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+let mainH1 = document.querySelector("#main h1");
+let mainH12 = document.querySelector("#main h1:nth-child(2)");
+let mainPara = document.querySelector("#main p");
+let mainAnker = document.querySelector("#main a");
+
+let aboutH1 = document.querySelector("#about h1");
+let aboutPara = document.querySelector("#about p");
+let aboutAnker = document.querySelector("#about a");
+
+let skillsH1 = document.querySelector("#skills h1");
+let skillsPara = document.querySelector("#skills p");
+let skillsCard = document.querySelector("#skills .skills-card");
+
+let contactH1 = document.querySelector("#contact H1");
+let contactForm = document.querySelector("#contact form");
+let contactAnker = document.querySelector("#contact a");
+
+function handleOpacity(opacityOne, opacityZero1, opacityZero2, opacityZero3){
+    opacityOne.style.opacity = 1; 
+    opacityZero1.style.opacity = 0; 
+    opacityZero2.style.opacity = 0; 
+    opacityZero3.style.opacity = 0;
 }
+function handleAnimation() {
+    for(let i =0; i< arguments.length; i++){
+        arguments[i].classList.remove('main-animation')
+          arguments[i].offsetWidth;
+            arguments[i].classList.add('main-animation')
+    }
+}
+
+logo.addEventListener("click", function() {
+    handleOpacity(main, about, skills, contact);
+    handleAnimation(mainH1, mainH12, mainPara, mainAnker);
+});
+
+aboutLink.addEventListener("click", function() {
+    handleOpacity(about, main, skills, contact);
+    handleAnimation(aboutH1, aboutPara, aboutAnker);
+});
+
+skillsLink.addEventListener("click", function() {
+    handleOpacity(skills, main, about, contact);
+    handleAnimation(skillsH1, skillsPara, skillsCard);
+});
+
+contactLink.addEventListener("click", function() {
+    handleOpacity(contact, main, about, skills);
+    handleAnimation(contactH1, contactForm, contactAnker);
+});
+
+let modal = document.querySelector('.modal');
+let trigger = document.querySelector('.open-modal');
+let closeButton = document.querySelector('.close-modal');
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(e) {
+    if(e.target === modal){
+        toggleModal();
+    }
+}
+
+trigger.addEventListener('click', toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+
+
+
+
+
+
