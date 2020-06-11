@@ -17,28 +17,28 @@
                     <span class ="logo" id ="logo"> Jellie </span>
                 <nav>
                     <ul>
-                        <li><a href = "#" id ="aboutLink">About </a> </li>
-                        <li><a href ="#" id = "skillsLink"> Skills</a></li>
-                        <li><a href ="#" id = "contactLink">Contact</a></li>
+                        <li><a href="#about" id="aboutLink">About </a> </li>
+                        <li><a href="#skills" id="skillsLink"> Skills</a></li>
+                        <li><a href="#contact" id="contactLink">Contact</a></li>
                     </ul>
                 </nav>
                 </header>
 
             <section class ="main" id ="main">
-            <h1 class = "main-animation"> Hi, </h1>
+            <h1 class="main-animation"> Hi, </h1>
             <h1 class ="main-animation"> I'm Angelica Harris </h1>
             <p class = "main-animation"> Web Designer & Web Developer</p>
             <a href ="#" class = "main-animation"> Contact Me</a>
             </section>
 
-            <section class ="about" id ="about">
+            <section class="about1" id="about">
             <h1> About </h1>
             <p>Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, or other type of compatible compute
             </p>
             <a href = "#"> Download Resume </a>
             </section>
 
-            <section class = "skills" id ="skills">
+            <section class = "skills1" id ="skills">
                 <h1> Skills</h1>
                 <p> You'll be working from the portfolio directory. Take a minute to look at the files under that directory.</p>
                 <div class = "skills-card">
@@ -69,7 +69,7 @@
         </div>
         </section>
 
-        <section class = "contact" id ="contact">
+        <section class = "contact1" id ="contact">
             <h1> Contact Me</h1>
             <form>
                 <input type ="text" placeholder="Full Name" />
@@ -121,6 +121,13 @@
             </div>
         </div>
         </div>  
+
+        <div id="content">
+      <h1>Random Quotes</h1>
+      <p>Click here to see a random quote:</p>
+      <button onclick="getRandomQuote()">Fetch a quote!</button>
+      <div id="quote-container"></div>
+    </div>
         
 <script src="script.js"></script>
   </body>
