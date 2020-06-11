@@ -13,7 +13,7 @@ let contact = document.querySelector("#contact");
 
 let mainH1 = document.querySelector("#main h1");
 let mainH12 = document.querySelector("#main h1:nth-child(2)");
-let mainPara = document.querySelector("#main p");
+let mainPara = document.querySelector("#main p");git 
 let mainAnker = document.querySelector("#main a");
 
 let aboutH1 = document.querySelector("#about h1");
@@ -114,5 +114,6 @@ function addQuoteToDom(quote) {
   const quoteContainer = document.getElementById('quote-container');
   quoteContainer.innerHTML = quote;
 }
+
 
 
