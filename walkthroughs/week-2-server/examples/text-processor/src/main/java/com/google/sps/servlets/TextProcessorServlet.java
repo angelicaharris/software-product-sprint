@@ -61,4 +61,15 @@ public final class TextProcessorServlet extends HttpServlet {
     }
     return value;
   }
+/*
+ document.onload = function(){
+document.getElementById("myForm").onsubmit = function() {myFunction()};
+}
+function myFunction() {
+  alert("The form was submitted");
+ 
+}
+*/
+
+
 }
