@@ -59,6 +59,7 @@ public final class TextProcessorServlet extends HttpServlet {
     if (value == null) {
       return defaultValue;
     }
+    
     return value;
   }
 /*
