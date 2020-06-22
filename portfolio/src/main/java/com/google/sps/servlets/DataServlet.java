@@ -24,9 +24,48 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
+
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+ Query query = new Query("Task").addSort("timestamp", SortDirection.DESCENDING);
+
+
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    PreparedQuery results = datastore.prepare(query);
+
+
+ArrayList<String> nums = new ArrayList<String>();
+nums.add("One");
+nums.add("Two");
+nums.add("Three");
+
+    log("Raw ArrayList ===> " + nums);
+ 
+		// Use this builder to construct a Gson instance when you need to set configuration options other than the default.
+		GsonBuilder gsonBuilder = new GsonBuilder();
+		
+		// This is the main class for using Gson. Gson is typically used by first constructing a Gson instance and then invoking toJson(Object) or fromJson(String, Class) methods on it. 
+		// Gson instances are Thread-safe so you can reuse them freely across multiple threads.
+		Gson gson = gsonBuilder.create();
+ 
+		String JSONObject = gson.toJson(nums);
+		log("\nConverted JSONObject ==> " + JSONObject);
+		
+		Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
+		String prettyJson = prettyGson.toJson(nums);
+		
+		log("\nPretty JSONObject ==> " + prettyJson);
+        
+
     response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello world!</h1>");
+    response.getWriter().println("<h1>Hello Angelica!</h1>");
+    	 
+      
   }
+ 
+
+
+
+
 }
