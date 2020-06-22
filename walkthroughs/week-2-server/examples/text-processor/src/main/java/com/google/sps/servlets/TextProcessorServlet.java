@@ -59,6 +59,18 @@ public final class TextProcessorServlet extends HttpServlet {
     if (value == null) {
       return defaultValue;
     }
+    
     return value;
   }
+/*
+ document.onload = function(){
+document.getElementById("myForm").onsubmit = function() {myFunction()};
+}
+function myFunction() {
+  alert("The form was submitted");
+ 
+}
+*/
+
+
 }
