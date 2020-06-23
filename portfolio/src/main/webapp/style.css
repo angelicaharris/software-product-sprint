@@ -136,6 +136,8 @@ h1:nth-child(2){
 .contact {
     padding: 100px 0 0 50px;
     position: absolute;
+    width: 700px;
+    height: 500px;
 }
 
 .skills-card {

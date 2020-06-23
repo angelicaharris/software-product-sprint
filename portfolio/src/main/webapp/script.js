@@ -81,7 +81,27 @@ closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
 
+ google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Skills', 'Months'],
+          ['HTML',     15],
+          ['CSS',      15],
+          ['Javascript',  10],
+          ['Bootstrap', 5],
+          
+        ]);
 
+        var options = {
+          title: 'My Experience in Months',
+          is3D: true,
+          pieSliceText: 'value',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
 
 
 
